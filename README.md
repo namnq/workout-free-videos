@@ -62,7 +62,7 @@ LICENSE              CC0 1.0 (public domain)
 ### 1. Download
 
 ```bash
-git clone https://github.com/Kezlo98/gym-exercise-videos.git
+git clone https://github.com/namnq/workout-free-videos.git
 # or grab the zip from the Releases page
 ```
 
@@ -71,8 +71,8 @@ git clone https://github.com/Kezlo98/gym-exercise-videos.git
 jsDelivr serves any file in this repo. Pin a release tag so files never change under you:
 
 ```
-https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/data/exercises.json
-https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/media/video/barbell-back-squat.mp4
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
 ```
 
 For an app with real traffic, copy the files to your own storage (S3, R2, your server) instead.
@@ -88,7 +88,7 @@ For an app with real traffic, copy the files to your own storage (S3, R2, your s
 ### 4. Query the data (JavaScript)
 
 ```js
-const base = 'https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/';
+const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
 const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
 
 // Beginner home workout: only dumbbells, bench or no equipment, nothing hard on the knees

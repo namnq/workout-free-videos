@@ -62,7 +62,7 @@ LICENSE              CC0 1.0 (public domain)
 ### 1. Tải về
 
 ```bash
-git clone https://github.com/Kezlo98/gym-exercise-videos.git
+git clone https://github.com/namnq/workout-free-videos.git
 # hoặc tải file zip ở trang Releases
 ```
 
@@ -71,8 +71,8 @@ git clone https://github.com/Kezlo98/gym-exercise-videos.git
 jsDelivr phục vụ được mọi file trong repo này. Hãy ghim theo tag release để file không bị đổi bất ngờ:
 
 ```
-https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/data/exercises.json
-https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/media/video/barbell-back-squat.mp4
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
 ```
 
 Nếu app có lượng truy cập thật, hãy chép file sang kho lưu trữ của bạn (S3, R2, server riêng).
@@ -88,7 +88,7 @@ Cần `muted` + `playsinline` để video tự phát trên iOS và hầu hết t
 ### 4. Truy vấn dữ liệu (JavaScript)
 
 ```js
-const base = 'https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/';
+const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
 const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
 
 // Bài tập tại nhà cho người mới: chỉ tạ đơn, ghế hoặc không dụng cụ, không nặng cho đầu gối
