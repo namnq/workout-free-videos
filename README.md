@@ -1,3 +1,5 @@
+<p align="center"><b>English</b> · <a href="README.vi.md">Tiếng Việt</a></p>
+
 # Gym Exercise Videos
 
 Free, ready-to-use exercise videos and structured data for fitness apps, websites and coaching tools.
@@ -187,12 +189,3 @@ Fixes to cues and new translations are welcome: edit `data/exercises.json`, run 
 | [`plantar-fascia-lacrosse-ball`](media/video/plantar-fascia-lacrosse-ball.mp4) | Plantar Fascia Release | Feet | lacrosse | beginner | 8s |
 | [`palmar-fascia-lacrosse-ball`](media/video/palmar-fascia-lacrosse-ball.mp4) | Palm Release | Hands | lacrosse | beginner | 8s |
 | [`neck-tiger-tail`](media/video/neck-tiger-tail.mp4) | Neck Release | Neck | roller | beginner | 8s |
-
-## Tiếng Việt
-
-Bộ **57 video bài tập gym cơ bản miễn phí** (720p, lặp liền, không tiếng) kèm dữ liệu JSON/CSV: nhóm cơ, dụng cụ, cấp độ, khớp cần lưu ý và 3 gợi ý kỹ thuật cho mỗi bài (Anh, Đức, Tây Ban Nha, Pháp, Ý, Nhật; tên nhóm cơ/dụng cụ có tiếng Việt).
-
-- Video: **CC BY 4.0**, dùng tự do kể cả thương mại, chỉ cần ghi nguồn: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0`
-- Dữ liệu và code: **MIT**
-- Tải về bằng `git clone` hoặc file zip ở mục Releases, hoặc nhúng trực tiếp qua jsDelivr (xem mục *Use it* ở trên)
-- Kiểm tra đủ file: `node scripts/validate-library.mjs`
