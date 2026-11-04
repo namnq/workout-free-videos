@@ -1,42 +1,104 @@
-<p align="center"><a href="README.md">English</a> · <b>Tiếng Việt</b></p>
+<div align="center">
 
-# Gym Exercise Videos
+<a href="README.md">English</a> · <b>Tiếng Việt</b>
 
-Bộ video bài tập và dữ liệu có cấu trúc miễn phí, dùng ngay cho app thể hình, website và công cụ huấn luyện.
+# 🏋️ Workout Free Videos
+
+**57 video bài tập gym lặp liền miễn phí, kèm dữ liệu có cấu trúc, dùng ngay cho mọi app thể hình.**
+
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0_1.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/namnq/workout-free-videos?label=version)](https://github.com/namnq/workout-free-videos/tags)
+[![Validate](https://github.com/namnq/workout-free-videos/actions/workflows/validate-library.yml/badge.svg)](https://github.com/namnq/workout-free-videos/actions/workflows/validate-library.yml)
+![Exercises](https://img.shields.io/badge/exercises-57-orange.svg)
+![Video](https://img.shields.io/badge/video-720p_MP4-red.svg)
+
+[**Xem demo**](https://namnq.github.io/workout-free-videos/) ·
+[Bắt đầu nhanh](#-bắt-đầu-nhanh) ·
+[Định dạng dữ liệu](#-định-dạng-dữ-liệu) ·
+[Danh sách bài tập](#-danh-sách-bài-tập) ·
+[Đóng góp](#-đóng-góp)
+
+</div>
+
+---
+
+## ✨ Tính năng
 
 - **57 bài tập**: sức mạnh, linh hoạt và phục hồi, bao phủ 22 nhóm cơ
-- **Video**: MP4 H.264 1280×720, lặp liền 4–8 giây, không tiếng, `faststart` (vừa tải vừa phát)
-- **Dữ liệu**: JSON + CSV gồm nhóm cơ, dụng cụ, cấp độ, khớp cần lưu ý và 3 gợi ý kỹ thuật cho mỗi bài
-- **Bản dịch**: tên bài và gợi ý kỹ thuật bằng tiếng Anh, Đức, Tây Ban Nha, Pháp, Ý, Nhật (tên nhóm cơ và dụng cụ có thêm tiếng Việt)
-- **Tổng dung lượng**: ~28 MB
+- **Video tối ưu cho web**: MP4 H.264 1280×720, lặp liền 4–8 giây, không tiếng, `faststart` nên vừa tải vừa phát
+- **Dữ liệu có cấu trúc**: JSON + CSV gồm nhóm cơ, dụng cụ, cấp độ, khớp cần lưu ý và 3 gợi ý kỹ thuật cho mỗi bài
+- **6 ngôn ngữ**: tên bài và gợi ý kỹ thuật bằng tiếng Anh, Đức, Tây Ban Nha, Pháp, Ý, Nhật (tên nhóm cơ và dụng cụ có thêm tiếng Việt)
+- **Nhẹ**: tổng cộng ~28 MB, kèm checksum SHA-256
+- **Public domain**: dùng ở bất cứ đâu, kể cả app thương mại, không cần ghi nguồn
 
 Đây chính là các clip dùng trong app lên lịch tập GymPlan, được chia sẻ cho cộng đồng.
 
-**Xem thử:** mở `index.html` (hoặc trang GitHub Pages của repo) để duyệt và lọc toàn bộ clip.
+## 🚀 Bắt đầu nhanh
 
-## Giấy phép
+**Nhúng trực tiếp qua jsDelivr** (CDN miễn phí, không cần hosting). Hãy ghim theo tag phiên bản để file không bị đổi bất ngờ:
 
-Toàn bộ repo (video, dữ liệu và code) phát hành theo [CC0 1.0](LICENSE), tức là thuộc phạm vi công cộng (public domain).
-Dùng cho mọi mục đích, kể cả app thương mại, được chỉnh sửa và phân phối lại. Không cần ghi nguồn, không cần xin phép.
+```
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
+```
 
-## Cấu trúc thư mục
+**Hiển thị clip:**
+
+```html
+<video src="media/video/barbell-back-squat.mp4" autoplay muted loop playsinline></video>
+```
+
+> [!TIP]
+> Cần `muted` + `playsinline` để video tự phát trên iOS và hầu hết trình duyệt.
+
+**Truy vấn dữ liệu (JavaScript):**
+
+```js
+const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
+const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
+
+// Bài tập tại nhà cho người mới: tạ đơn, ghế hoặc không dụng cụ, không nặng cho đầu gối
+const home = new Set(['dumbbell', 'bench', 'bodyweight']);
+const picks = exercises.filter((e) =>
+  e.level === 'beginner' && e.equipment.every((q) => home.has(q)) && !e.jointStress.includes('knee'));
+
+picks.forEach((e) => console.log(e.translations.de?.name ?? e.name, base + e.video.path));
+```
+
+**Python:**
+
+```python
+import json
+exercises = json.load(open("data/exercises.json", encoding="utf-8"))
+legs = [e["slug"] for e in exercises if e["region"] == "lower"]
+```
+
+**Tải toàn bộ về máy:**
+
+```bash
+git clone https://github.com/namnq/workout-free-videos.git
+```
+
+> [!NOTE]
+> Nếu app có lượng truy cập thật, hãy chép file sang kho lưu trữ của bạn (S3, R2, server riêng) thay vì nhúng trực tiếp.
+
+## 📁 Cấu trúc thư mục
 
 ```
 data/
-  exercises.json     bản ghi đầy đủ (mỗi bài tập một object)
-  exercises.csv      bảng phẳng, chỉ tiếng Anh, danh sách nối bằng "|"
-  muscles.json       mã nhóm cơ -> { region, label: { en, vi } }
-  equipment.json     mã dụng cụ -> { label: { en, vi } }
+  exercises.json         bản ghi đầy đủ (mỗi bài tập một object)
+  exercises.csv          bảng phẳng, chỉ tiếng Anh, danh sách nối bằng "|"
+  muscles.json           mã nhóm cơ -> { region, label: { en, vi } }
+  equipment.json         mã dụng cụ -> { label: { en, vi } }
 media/
   video/<slug>.mp4
-  SHA256SUMS         checksum của mọi file media
+  SHA256SUMS             checksum của mọi file media
 scripts/
   validate-library.mjs   kiểm tra dữ liệu, file và checksum
-index.html           trang duyệt clip
-LICENSE              CC0 1.0 (public domain)
+index.html               trang duyệt clip (chính là trang demo)
 ```
 
-## Định dạng dữ liệu
+## 📋 Định dạng dữ liệu
 
 ```jsonc
 {
@@ -57,74 +119,10 @@ LICENSE              CC0 1.0 (public domain)
 }
 ```
 
-## Cách dùng
+## 🗂 Danh sách bài tập
 
-### 1. Tải về
-
-```bash
-git clone https://github.com/namnq/workout-free-videos.git
-# hoặc tải file zip ở trang Releases
-```
-
-### 2. Nhúng trực tiếp qua CDN miễn phí (không cần hosting)
-
-jsDelivr phục vụ được mọi file trong repo này. Hãy ghim theo tag release để file không bị đổi bất ngờ:
-
-```
-https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
-https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
-```
-
-Nếu app có lượng truy cập thật, hãy chép file sang kho lưu trữ của bạn (S3, R2, server riêng).
-
-### 3. Hiển thị clip
-
-```html
-<video src="media/video/barbell-back-squat.mp4" autoplay muted loop playsinline></video>
-```
-
-Cần `muted` + `playsinline` để video tự phát trên iOS và hầu hết trình duyệt.
-
-### 4. Truy vấn dữ liệu (JavaScript)
-
-```js
-const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
-const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
-
-// Bài tập tại nhà cho người mới: chỉ tạ đơn, ghế hoặc không dụng cụ, không nặng cho đầu gối
-const home = new Set(['dumbbell', 'bench', 'bodyweight']);
-const picks = exercises.filter((e) =>
-  e.level === 'beginner' && e.equipment.every((q) => home.has(q)) && !e.jointStress.includes('knee'));
-
-picks.forEach((e) => console.log(e.translations.de?.name ?? e.name, base + e.video.path));
-```
-
-### Python
-
-```python
-import json
-exercises = json.load(open("data/exercises.json", encoding="utf-8"))
-legs = [e["slug"] for e in exercises if e["region"] == "lower"]
-```
-
-## Kiểm tra bản tải về
-
-```bash
-node scripts/validate-library.mjs      # Node 18+, không cần cài gì
-# hoặc chỉ kiểm tra checksum:
-shasum -a 256 -c media/SHA256SUMS      # macOS
-sha256sum -c media/SHA256SUMS          # Linux
-```
-
-## Lưu ý an toàn
-
-Các gợi ý kỹ thuật chỉ là lời nhắc ngắn khi tập, không phải lời khuyên y tế. Người đang đau hoặc chấn thương nên hỏi ý kiến chuyên gia. `jointStress` là gợi ý để lọc bài, không phải chẩn đoán.
-
-## Đóng góp
-
-Rất hoan nghênh sửa gợi ý kỹ thuật và thêm bản dịch: sửa `data/exercises.json`, chạy `node scripts/validate-library.mjs`, rồi mở pull request. Id và slug là cố định: đừng đổi tên, hãy thêm bản ghi mới. Video mới phải do bạn tự quay và phát hành theo CC0 1.0.
-
-## Danh sách bài tập
+<details>
+<summary><b>Xem đủ 57 bài tập</b></summary>
 
 | Slug | Bài tập | Nhóm cơ | Dụng cụ | Cấp độ | Độ dài |
 |---|---|---|---|---|---|
@@ -185,3 +183,37 @@ Rất hoan nghênh sửa gợi ý kỹ thuật và thêm bản dịch: sửa `da
 | [`plantar-fascia-lacrosse-ball`](media/video/plantar-fascia-lacrosse-ball.mp4) | Plantar Fascia Release | Bàn chân | Bóng massage | Cơ bản | 8s |
 | [`palmar-fascia-lacrosse-ball`](media/video/palmar-fascia-lacrosse-ball.mp4) | Palm Release | Bàn tay | Bóng massage | Cơ bản | 8s |
 | [`neck-tiger-tail`](media/video/neck-tiger-tail.mp4) | Neck Release | Cổ | Con lăn | Cơ bản | 8s |
+
+</details>
+
+## ✅ Kiểm tra bản tải về
+
+```bash
+node scripts/validate-library.mjs      # Node 18+, không cần cài gì
+# hoặc chỉ kiểm tra checksum:
+shasum -a 256 -c media/SHA256SUMS      # macOS
+sha256sum -c media/SHA256SUMS          # Linux
+```
+
+## 🤝 Đóng góp
+
+Rất hoan nghênh sửa gợi ý kỹ thuật và thêm bản dịch:
+
+1. Sửa `data/exercises.json`
+2. Chạy `node scripts/validate-library.mjs`
+3. Mở pull request
+
+Id và slug là cố định: đừng đổi tên, hãy thêm bản ghi mới. Video mới phải do bạn tự quay và phát hành theo CC0 1.0.
+
+## ⚠️ Lưu ý an toàn
+
+Các gợi ý kỹ thuật chỉ là lời nhắc ngắn khi tập, không phải lời khuyên y tế. Người đang đau hoặc chấn thương nên hỏi ý kiến chuyên gia. `jointStress` là gợi ý để lọc bài, không phải chẩn đoán.
+
+## 📄 Giấy phép
+
+Toàn bộ repo (video, dữ liệu và code) phát hành theo [CC0 1.0 Universal](LICENSE), tức là thuộc phạm vi công cộng (public domain).
+Dùng cho mọi mục đích, kể cả app thương mại. Được chỉnh sửa và phân phối lại. Không cần ghi nguồn, không cần xin phép.
+
+<div align="center">
+<sub>Nếu repo giúp bạn tiết kiệm thời gian, hãy tặng một ⭐ để người khác dễ tìm thấy.</sub>
+</div>

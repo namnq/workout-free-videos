@@ -1,42 +1,104 @@
-<p align="center"><b>English</b> · <a href="README.vi.md">Tiếng Việt</a></p>
+<div align="center">
 
-# Gym Exercise Videos
+<b>English</b> · <a href="README.vi.md">Tiếng Việt</a>
 
-Free, ready-to-use exercise videos and structured data for fitness apps, websites and coaching tools.
+# 🏋️ Workout Free Videos
 
-- **57 exercises**: strength, mobility and recovery, covering 22 muscle groups
-- **Video**: 1280×720 H.264 MP4, 4–8 s seamless loops, no audio, `faststart` (plays while downloading)
-- **Data**: JSON + CSV with muscles, equipment, level, joint stress and 3 form cues per exercise
-- **Translations**: names and cues in English, German, Spanish, French, Italian, Japanese (muscle and equipment labels also in Vietnamese)
-- **Total size**: ~28 MB
+**57 free, looping gym exercise videos with structured data — drop them into any fitness app.**
+
+[![License: CC0-1.0](https://img.shields.io/badge/license-CC0_1.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/namnq/workout-free-videos?label=version)](https://github.com/namnq/workout-free-videos/tags)
+[![Validate](https://github.com/namnq/workout-free-videos/actions/workflows/validate-library.yml/badge.svg)](https://github.com/namnq/workout-free-videos/actions/workflows/validate-library.yml)
+![Exercises](https://img.shields.io/badge/exercises-57-orange.svg)
+![Video](https://img.shields.io/badge/video-720p_MP4-red.svg)
+
+[**Live demo**](https://namnq.github.io/workout-free-videos/) ·
+[Quick start](#-quick-start) ·
+[Data format](#-data-format) ·
+[Exercise list](#-exercise-list) ·
+[Contributing](#-contributing)
+
+</div>
+
+---
+
+## ✨ Features
+
+- **57 exercises**: strength, mobility and recovery across 22 muscle groups
+- **Web-ready video**: 1280×720 H.264 MP4, 4–8 s seamless loops, no audio, `faststart` so playback starts while downloading
+- **Structured data**: JSON + CSV with muscles, equipment, level, joint stress and 3 form cues per exercise
+- **6 languages**: names and cues in English, German, Spanish, French, Italian and Japanese (muscle and equipment labels also in Vietnamese)
+- **Lightweight**: ~28 MB for everything, with SHA-256 checksums
+- **Public domain**: use it anywhere, including commercial apps. No credit required
 
 These are the same clips used in the GymPlan workout planner, released for the community.
 
-**Live preview:** open `index.html` (or the GitHub Pages site of this repo) to browse and filter every clip.
+## 🚀 Quick start
 
-## Licence
+**Hot-link from jsDelivr** (free CDN, no hosting needed). Pin a version tag so files never change under you:
 
-Everything in this repo (videos, data and code) is released under [CC0 1.0](LICENSE), dedicated to the public domain.
-Use it for anything, including commercial apps, edit it, redistribute it. No credit or permission needed.
+```
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
+https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
+```
 
-## Layout
+**Show a clip:**
+
+```html
+<video src="media/video/barbell-back-squat.mp4" autoplay muted loop playsinline></video>
+```
+
+> [!TIP]
+> `muted` + `playsinline` are required for autoplay on iOS and most browsers.
+
+**Query the data (JavaScript):**
+
+```js
+const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
+const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
+
+// Beginner home workout: dumbbells, bench or no equipment, nothing hard on the knees
+const home = new Set(['dumbbell', 'bench', 'bodyweight']);
+const picks = exercises.filter((e) =>
+  e.level === 'beginner' && e.equipment.every((q) => home.has(q)) && !e.jointStress.includes('knee'));
+
+picks.forEach((e) => console.log(e.translations.de?.name ?? e.name, base + e.video.path));
+```
+
+**Python:**
+
+```python
+import json
+exercises = json.load(open("data/exercises.json", encoding="utf-8"))
+legs = [e["slug"] for e in exercises if e["region"] == "lower"]
+```
+
+**Download everything:**
+
+```bash
+git clone https://github.com/namnq/workout-free-videos.git
+```
+
+> [!NOTE]
+> For an app with real traffic, copy the files to your own storage (S3, R2, your server) instead of hot-linking.
+
+## 📁 Project structure
 
 ```
 data/
-  exercises.json     full records (one object per exercise)
-  exercises.csv      flat table, English only, lists joined with "|"
-  muscles.json       muscle key -> { region, label: { en, vi } }
-  equipment.json     equipment key -> { label: { en, vi } }
+  exercises.json         full records (one object per exercise)
+  exercises.csv          flat table, English only, lists joined with "|"
+  muscles.json           muscle key -> { region, label: { en, vi } }
+  equipment.json         equipment key -> { label: { en, vi } }
 media/
   video/<slug>.mp4
-  SHA256SUMS         checksums for every media file
+  SHA256SUMS             checksums for every media file
 scripts/
   validate-library.mjs   checks data, files and checksums
-index.html           browsable gallery
-LICENSE              CC0 1.0 (public domain)
+index.html               browsable gallery (the live demo)
 ```
 
-## Data format
+## 📋 Data format
 
 ```jsonc
 {
@@ -57,74 +119,10 @@ LICENSE              CC0 1.0 (public domain)
 }
 ```
 
-## Use it
+## 🗂 Exercise list
 
-### 1. Download
-
-```bash
-git clone https://github.com/namnq/workout-free-videos.git
-# or grab the zip from the Releases page
-```
-
-### 2. Hot-link from a free CDN (no hosting needed)
-
-jsDelivr serves any file in this repo. Pin a release tag so files never change under you:
-
-```
-https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/data/exercises.json
-https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/media/video/barbell-back-squat.mp4
-```
-
-For an app with real traffic, copy the files to your own storage (S3, R2, your server) instead.
-
-### 3. Show a clip
-
-```html
-<video src="media/video/barbell-back-squat.mp4" autoplay muted loop playsinline></video>
-```
-
-`muted` + `playsinline` are needed for autoplay on iOS and most browsers.
-
-### 4. Query the data (JavaScript)
-
-```js
-const base = 'https://cdn.jsdelivr.net/gh/namnq/workout-free-videos@v2.0.0/';
-const exercises = await fetch(base + 'data/exercises.json').then((r) => r.json());
-
-// Beginner home workout: only dumbbells, bench or no equipment, nothing hard on the knees
-const home = new Set(['dumbbell', 'bench', 'bodyweight']);
-const picks = exercises.filter((e) =>
-  e.level === 'beginner' && e.equipment.every((q) => home.has(q)) && !e.jointStress.includes('knee'));
-
-picks.forEach((e) => console.log(e.translations.de?.name ?? e.name, base + e.video.path));
-```
-
-### Python
-
-```python
-import json
-exercises = json.load(open("data/exercises.json", encoding="utf-8"))
-legs = [e["slug"] for e in exercises if e["region"] == "lower"]
-```
-
-## Verify the download
-
-```bash
-node scripts/validate-library.mjs      # Node 18+, no install
-# or only the checksums:
-shasum -a 256 -c media/SHA256SUMS      # macOS
-sha256sum -c media/SHA256SUMS          # Linux
-```
-
-## Safety note
-
-Cues are short coaching reminders, not medical advice. Users with pain or injuries should check with a qualified professional. `jointStress` is a hint for filtering, not a diagnosis.
-
-## Contributing
-
-Fixes to cues and new translations are welcome: edit `data/exercises.json`, run `node scripts/validate-library.mjs`, open a pull request. Ids and slugs are stable: do not rename them, add new entries instead. New footage must be your own work and released under CC0 1.0.
-
-## Exercises
+<details>
+<summary><b>Show all 57 exercises</b></summary>
 
 | Slug | Exercise | Muscle | Equipment | Level | Length |
 |---|---|---|---|---|---|
@@ -185,3 +183,37 @@ Fixes to cues and new translations are welcome: edit `data/exercises.json`, run 
 | [`plantar-fascia-lacrosse-ball`](media/video/plantar-fascia-lacrosse-ball.mp4) | Plantar Fascia Release | Feet | lacrosse | beginner | 8s |
 | [`palmar-fascia-lacrosse-ball`](media/video/palmar-fascia-lacrosse-ball.mp4) | Palm Release | Hands | lacrosse | beginner | 8s |
 | [`neck-tiger-tail`](media/video/neck-tiger-tail.mp4) | Neck Release | Neck | roller | beginner | 8s |
+
+</details>
+
+## ✅ Verify your download
+
+```bash
+node scripts/validate-library.mjs      # Node 18+, no install
+# or only the checksums:
+shasum -a 256 -c media/SHA256SUMS      # macOS
+sha256sum -c media/SHA256SUMS          # Linux
+```
+
+## 🤝 Contributing
+
+Fixes to cues and new translations are welcome:
+
+1. Edit `data/exercises.json`
+2. Run `node scripts/validate-library.mjs`
+3. Open a pull request
+
+Ids and slugs are stable: don't rename them, add new entries instead. New footage must be your own work and released under CC0 1.0.
+
+## ⚠️ Disclaimer
+
+Cues are short coaching reminders, not medical advice. Anyone with pain or an injury should check with a qualified professional. `jointStress` is a hint for filtering, not a diagnosis.
+
+## 📄 License
+
+Everything in this repo (videos, data and code) is released under [CC0 1.0 Universal](LICENSE) and dedicated to the public domain.
+Use it for anything, including commercial apps. Edit it, redistribute it. No credit or permission needed.
+
+<div align="center">
+<sub>If this saved you time, a ⭐ helps others find it.</sub>
+</div>
