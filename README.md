@@ -16,12 +16,8 @@ These are the same clips used in the GymPlan workout planner, released for the c
 
 ## Licence
 
-| Part | Licence | What you must do |
-| --- | --- | --- |
-| Videos (`media/`) | [CC BY 4.0](media/LICENSE) | Use freely, including commercially. Credit: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0` |
-| Data and code (`data/`, `scripts/`, `index.html`) | [MIT](LICENSE) | Keep the copyright notice |
-
-Put the credit anywhere reasonable: an About screen, credits page, video caption or footer.
+Everything in this repo (videos, data and code) is released under [CC0 1.0](LICENSE), dedicated to the public domain.
+Use it for anything, including commercial apps, edit it, redistribute it. No credit or permission needed.
 
 ## Layout
 
@@ -34,10 +30,10 @@ data/
 media/
   video/<slug>.mp4
   SHA256SUMS         checksums for every media file
-  LICENSE            CC BY 4.0
 scripts/
   validate-library.mjs   checks data, files and checksums
 index.html           browsable gallery
+LICENSE              CC0 1.0 (public domain)
 ```
 
 ## Data format
@@ -126,7 +122,7 @@ Cues are short coaching reminders, not medical advice. Users with pain or injuri
 
 ## Contributing
 
-Fixes to cues and new translations are welcome: edit `data/exercises.json`, run `node scripts/validate-library.mjs`, open a pull request. Ids and slugs are stable: do not rename them, add new entries instead. New footage must be your own work and released under CC BY 4.0.
+Fixes to cues and new translations are welcome: edit `data/exercises.json`, run `node scripts/validate-library.mjs`, open a pull request. Ids and slugs are stable: do not rename them, add new entries instead. New footage must be your own work and released under CC0 1.0.
 
 ## Exercises
 

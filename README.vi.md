@@ -16,12 +16,8 @@ Bộ video bài tập và dữ liệu có cấu trúc miễn phí, dùng ngay ch
 
 ## Giấy phép
 
-| Phần | Giấy phép | Bạn cần làm gì |
-| --- | --- | --- |
-| Video (`media/`) | [CC BY 4.0](media/LICENSE) | Dùng tự do, kể cả thương mại. Ghi nguồn: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0` |
-| Dữ liệu và code (`data/`, `scripts/`, `index.html`) | [MIT](LICENSE) | Giữ nguyên thông báo bản quyền |
-
-Ghi nguồn ở chỗ nào hợp lý là được: màn hình Giới thiệu, trang credits, chú thích video hoặc footer.
+Toàn bộ repo (video, dữ liệu và code) phát hành theo [CC0 1.0](LICENSE), tức là thuộc phạm vi công cộng (public domain).
+Dùng cho mọi mục đích, kể cả app thương mại, được chỉnh sửa và phân phối lại. Không cần ghi nguồn, không cần xin phép.
 
 ## Cấu trúc thư mục
 
@@ -34,10 +30,10 @@ data/
 media/
   video/<slug>.mp4
   SHA256SUMS         checksum của mọi file media
-  LICENSE            CC BY 4.0
 scripts/
   validate-library.mjs   kiểm tra dữ liệu, file và checksum
 index.html           trang duyệt clip
+LICENSE              CC0 1.0 (public domain)
 ```
 
 ## Định dạng dữ liệu
@@ -126,7 +122,7 @@ Các gợi ý kỹ thuật chỉ là lời nhắc ngắn khi tập, không phả
 
 ## Đóng góp
 
-Rất hoan nghênh sửa gợi ý kỹ thuật và thêm bản dịch: sửa `data/exercises.json`, chạy `node scripts/validate-library.mjs`, rồi mở pull request. Id và slug là cố định: đừng đổi tên, hãy thêm bản ghi mới. Video mới phải do bạn tự quay và phát hành theo CC BY 4.0.
+Rất hoan nghênh sửa gợi ý kỹ thuật và thêm bản dịch: sửa `data/exercises.json`, chạy `node scripts/validate-library.mjs`, rồi mở pull request. Id và slug là cố định: đừng đổi tên, hãy thêm bản ghi mới. Video mới phải do bạn tự quay và phát hành theo CC0 1.0.
 
 ## Danh sách bài tập
 
