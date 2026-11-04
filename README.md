@@ -12,7 +12,7 @@
 ![Exercises](https://img.shields.io/badge/exercises-57-orange.svg)
 ![Video](https://img.shields.io/badge/video-720p_MP4-red.svg)
 
-[**Live demo**](https://namnq.github.io/workout-free-videos/) ·
+[**Live demo**](https://galaxy-fitness.com/) ·
 [Quick start](#-quick-start) ·
 [Data format](#-data-format) ·
 [Exercise list](#-exercise-list) ·
@@ -95,7 +95,7 @@ media/
   SHA256SUMS             checksums for every media file
 scripts/
   validate-library.mjs   checks data, files and checksums
-index.html               browsable gallery (the live demo)
+index.html               browsable gallery, open locally
 ```
 
 ## 📋 Data format

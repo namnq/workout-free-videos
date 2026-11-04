@@ -12,7 +12,7 @@
 ![Exercises](https://img.shields.io/badge/exercises-57-orange.svg)
 ![Video](https://img.shields.io/badge/video-720p_MP4-red.svg)
 
-[**Xem demo**](https://namnq.github.io/workout-free-videos/) ·
+[**Xem demo**](https://galaxy-fitness.com/) ·
 [Bắt đầu nhanh](#-bắt-đầu-nhanh) ·
 [Định dạng dữ liệu](#-định-dạng-dữ-liệu) ·
 [Danh sách bài tập](#-danh-sách-bài-tập) ·
@@ -95,7 +95,7 @@ media/
   SHA256SUMS             checksum của mọi file media
 scripts/
   validate-library.mjs   kiểm tra dữ liệu, file và checksum
-index.html               trang duyệt clip (chính là trang demo)
+index.html               trang duyệt clip, mở trực tiếp trên máy
 ```
 
 ## 📋 Định dạng dữ liệu
