@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gym Exercise Videos</title>
-<meta name="description" content="Free exercise videos and data: 57 gym exercises with 720p clips, posters, form cues and translations.">
+<meta name="description" content="Free exercise videos and data: 57 gym exercises with 720p clips, form cues and translations.">
 <style>
   :root { --bg: #f7f7f5; --card: #fff; --fg: #1b1b1b; --muted: #6b6b6b; --line: #e3e3df; --accent: #e4572e; }
   @media (prefers-color-scheme: dark) {
@@ -86,7 +86,7 @@
     $('grid').innerHTML = list.map((e) => {
       const t = lang === 'en' ? e : e.translations[lang];
       return `<article class="card">
-        <video muted loop playsinline preload="none" poster="${e.poster.path}" data-src="${e.video.path}"></video>
+        <video muted loop playsinline preload="none" data-src="${e.video.path}"></video>
         <div class="body">
           <h2>${esc(t.name)}</h2>
           <div class="tags">

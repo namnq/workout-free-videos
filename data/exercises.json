@@ -77,11 +77,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7.5
-    },
-    "poster": {
-      "path": "media/poster/dumbbell-bench-press.jpg",
-      "bytes": 65271,
-      "sha256": "b5ea38086e80fba5fcaac1687dc6cfe3e9daf93db33b4842702b0ecdef7cf69a"
     }
   },
   {
@@ -162,11 +157,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/incline-bench-press.jpg",
-      "bytes": 76327,
-      "sha256": "0c5bd3bc2060acfd7ebe8e313a14185a9900908a164d282acd454cef52fcf67c"
     }
   },
   {
@@ -246,11 +236,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/exercise-ball-dumbbell-bench-press.jpg",
-      "bytes": 64455,
-      "sha256": "363e38956fe303ad4728240bce1c5428e52b4604457d2a529ac510c20ae4f629"
     }
   },
   {
@@ -328,11 +313,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7.7
-    },
-    "poster": {
-      "path": "media/poster/chest-dip.jpg",
-      "bytes": 72284,
-      "sha256": "516234da5f87009eae416ae0756044469ab15d7fa73a52bdd5ae4afab6a39dd4"
     }
   },
   {
@@ -413,11 +393,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/military-press.jpg",
-      "bytes": 81297,
-      "sha256": "51a0be3ad8df0c0d45c641ff6c024f97e7ddb3cc4730841f181f4b21f4fd441c"
     }
   },
   {
@@ -492,11 +467,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 6.8
-    },
-    "poster": {
-      "path": "media/poster/dumbbell-lateral-raise.jpg",
-      "bytes": 69096,
-      "sha256": "f551ee9f5c19ef62934211bdb3ec355edebe4488be724dbd635d985530d8725e"
     }
   },
   {
@@ -573,11 +543,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/bent-over-low-pulley-rear-delt-fly.jpg",
-      "bytes": 70512,
-      "sha256": "3e5a9caa25d35d5e237bc43bce3d5bfb8bfa2f9fffb51d0125249fd08c202593"
     }
   },
   {
@@ -657,11 +622,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/close-grip-bench-press.jpg",
-      "bytes": 78925,
-      "sha256": "bc233f6c09d26d7671e9ebb5f2804e64d580858976b2f93ddf7cb7c2537bd48d"
     }
   },
   {
@@ -738,11 +698,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7
-    },
-    "poster": {
-      "path": "media/poster/ez-bar-skullcrusher.jpg",
-      "bytes": 73401,
-      "sha256": "17a555528fb591ffe902301593fd9a8d7f30531581b981f60f9d97b7ce53170f"
     }
   },
   {
@@ -820,11 +775,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 4.7
-    },
-    "poster": {
-      "path": "media/poster/weighted-tricep-dips.jpg",
-      "bytes": 82619,
-      "sha256": "752f3d3b14428eff8edf9897c263ca8f2786e7c7b746035f31bffadaacb1a736"
     }
   },
   {
@@ -901,11 +851,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/standing-barbell-curl.jpg",
-      "bytes": 70956,
-      "sha256": "0728af1dfeab7a8953160f8deee6991e80380ec42be49f8f1fd0362fbcfd3d8e"
     }
   },
   {
@@ -980,11 +925,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/incline-dumbbell-curl.jpg",
-      "bytes": 74554,
-      "sha256": "c6ae79111e2edfcbb6a658a79857c331f62bbd8c188d38a6b11c5b3958b0ed1a"
     }
   },
   {
@@ -1061,11 +1001,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7.7
-    },
-    "poster": {
-      "path": "media/poster/dumbbell-hammer-preacher-curl.jpg",
-      "bytes": 74914,
-      "sha256": "b36a30d3ee5a8a2652e783aa46cc220d8849595bde2d2ce8256abb4017572096"
     }
   },
   {
@@ -1141,11 +1076,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/seated-barbell-wrist-curl.jpg",
-      "bytes": 77810,
-      "sha256": "a6eb1331ce8f7e3bfced032944b9630b9deb344b1505d9dc2ed16fa576854e5f"
     }
   },
   {
@@ -1222,11 +1152,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/reverse-grip-barbell-curl.jpg",
-      "bytes": 63965,
-      "sha256": "72814fad8b39dd10f80117e400e3cb90065b09380ba6320c1deb614ba35c5b8c"
     }
   },
   {
@@ -1302,11 +1227,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/plate-pinch-carry.jpg",
-      "bytes": 73272,
-      "sha256": "18a9f42b2d6c9e9f1fdc57cb0a8414c858ef597923f7b68b4403e5ecd9177bfb"
     }
   },
   {
@@ -1380,11 +1300,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 6.3
-    },
-    "poster": {
-      "path": "media/poster/barbell-shrug.jpg",
-      "bytes": 70191,
-      "sha256": "b84aa88aaae9a39eed90d07b9e387cc389ce21ee65fec6bac067ddeea909d908"
     }
   },
   {
@@ -1458,11 +1373,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/dumbbell-shrug.jpg",
-      "bytes": 75153,
-      "sha256": "2d455f15aed57a3c30ff0f090c4ef4018706cf14c018f4295895ccce9ca3f8fa"
     }
   },
   {
@@ -1540,11 +1450,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 4.3
-    },
-    "poster": {
-      "path": "media/poster/barbell-upright-row.jpg",
-      "bytes": 66930,
-      "sha256": "eb05a15d06476edb96e1a436c08752b9916f3fe5a29ac57de2fb3ceb0a6e32d0"
     }
   },
   {
@@ -1621,11 +1526,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7.3
-    },
-    "poster": {
-      "path": "media/poster/seated-cable-row.jpg",
-      "bytes": 65890,
-      "sha256": "09a5db011b66e7e096941c24e1acbb2362ef9741084012d43b9330f2477317c3"
     }
   },
   {
@@ -1701,11 +1601,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7.2
-    },
-    "poster": {
-      "path": "media/poster/machine-t-bar-row.jpg",
-      "bytes": 85022,
-      "sha256": "364616fe10a0833b439444eb7663e6674a724cca21b92a39d5bf63163c9972c1"
     }
   },
   {
@@ -1785,11 +1680,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/bent-over-row.jpg",
-      "bytes": 73012,
-      "sha256": "042e47dc7dcbddc4b3f08d887451d9fa3f101522d64a85d23062a30faf7ada76"
     }
   },
   {
@@ -1866,11 +1756,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/lat-pull-down.jpg",
-      "bytes": 74769,
-      "sha256": "99538f428bf3bcab9440dd572a5bf1fb2754123931a1375d0ea567797fc6c6ae"
     }
   },
   {
@@ -1949,11 +1834,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 5.8
-    },
-    "poster": {
-      "path": "media/poster/wide-grip-pull-up.jpg",
-      "bytes": 89385,
-      "sha256": "f68e21f81ab25a602a8bb10a88d8d8035e1125a2628c349ff08309efe53dcee6"
     }
   },
   {
@@ -2026,11 +1906,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/straight-arm-lat-pull-down.jpg",
-      "bytes": 87696,
-      "sha256": "dc54f2928eb10bbb356e500fd76fdb6cc4a3849b64991740e3cb450422789e4a"
     }
   },
   {
@@ -2105,11 +1980,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/superman.jpg",
-      "bytes": 70700,
-      "sha256": "1cd98b4a1a33cd51323041e3906b5842017704583fec162490dfd7d760dba622"
     }
   },
   {
@@ -2184,11 +2054,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 5
-    },
-    "poster": {
-      "path": "media/poster/sit-up.jpg",
-      "bytes": 62042,
-      "sha256": "f484c505413584ba1fdc0cc81820ce9255a6ccda74a3a423edfd25025743c98f"
     }
   },
   {
@@ -2265,11 +2130,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/lying-floor-leg-raise.jpg",
-      "bytes": 73454,
-      "sha256": "bf14710995e3cd957c6316a2575d829b25f47ff22addf97466e75ecaccf25901"
     }
   },
   {
@@ -2343,11 +2203,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/weighted-crunch.jpg",
-      "bytes": 75656,
-      "sha256": "bbdbcf07338e0fa4fa6d6da82f5fce8b4439a312800bb9933efba2b16c0dcd28"
     }
   },
   {
@@ -2423,11 +2278,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/tall-kneeling-cable-lift.jpg",
-      "bytes": 92265,
-      "sha256": "8ba20d37115c47547fe9afb484412e47200ecaa0ee6d31b9ad49fc379a49a753"
     }
   },
   {
@@ -2503,11 +2353,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/tall-kneeling-cable-chop.jpg",
-      "bytes": 86932,
-      "sha256": "698ee3b784a9e7c3387c16f50fdb647f70d4be608605cb02a436fbbdea640af8"
     }
   },
   {
@@ -2582,11 +2427,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/split-stance-cable-lift.jpg",
-      "bytes": 90032,
-      "sha256": "f92ea7240d924d87f9e050f4128b8b169d887e498b28b237058b98be24aaf4ab"
     }
   },
   {
@@ -2664,11 +2504,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 7
-    },
-    "poster": {
-      "path": "media/poster/barbell-hip-thrust.jpg",
-      "bytes": 63574,
-      "sha256": "fe470a777b2b18a3271ece16a92db8cbcbfeb654a17d9c264e13456d8116cec4"
     }
   },
   {
@@ -2744,11 +2579,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/hyperextension.jpg",
-      "bytes": 68549,
-      "sha256": "e9cf4247e8951f3a5e133b807800355feafb38a91a3992bd45e695c192daacac"
     }
   },
   {
@@ -2827,11 +2657,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/good-mornings.jpg",
-      "bytes": 73950,
-      "sha256": "81dbd5211baa86dca2e111516ed5bf95559513660ad7d999d95d21cc6e836291"
     }
   },
   {
@@ -2913,11 +2738,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/barbell-back-squat.jpg",
-      "bytes": 75535,
-      "sha256": "9a62e85dbedca94fb2d4c547d3282b9d8db70b953d6c165f146feb6c33aba6be"
     }
   },
   {
@@ -2994,11 +2814,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/leg-press.jpg",
-      "bytes": 73895,
-      "sha256": "ba135e7223a4bc324fdc6353ac6db0778d72b32373794a6d8330e6559ff1a5bd"
     }
   },
   {
@@ -3075,11 +2890,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/machine-hack-squat.jpg",
-      "bytes": 75442,
-      "sha256": "5cfac80aba191f94521e4253234982779fd7189f7a9e1a50a0b68f3cf0d9f7ee"
     }
   },
   {
@@ -3156,11 +2966,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/exercise-ball-wall-squat.jpg",
-      "bytes": 60840,
-      "sha256": "9a53e8646632f9357f195463b48c5bcae8f94f47927583f9e1795079170b2aed"
     }
   },
   {
@@ -3240,11 +3045,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/stiff-leg-deadlift.jpg",
-      "bytes": 71813,
-      "sha256": "6e069f9c6f75c61efce919cebba4f91c600f64e19270cebed3513ab9de76930a"
     }
   },
   {
@@ -3315,11 +3115,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 6.8
-    },
-    "poster": {
-      "path": "media/poster/seated-leg-curl.jpg",
-      "bytes": 78511,
-      "sha256": "d923be713365d1a89b8eb12ab2c4680ebb85ae8b57a3bcc16eb0e2505752fc13"
     }
   },
   {
@@ -3395,11 +3190,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/exercise-ball-leg-curl.jpg",
-      "bytes": 61315,
-      "sha256": "3d9834a8f0a21911fac6ef611dd6c9688b5a108c62e496b54d4301a604cedbc9"
     }
   },
   {
@@ -3474,11 +3264,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/nordic-hamstring-curl.jpg",
-      "bytes": 76716,
-      "sha256": "e4444e970049800e294b3f59c5d31a297b712a74a31efa6c940810bc32be3e29"
     }
   },
   {
@@ -3549,11 +3334,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/standing-machine-calf-raise.jpg",
-      "bytes": 57486,
-      "sha256": "f67e89e035e0ec1b74cd53bad58c2fa9f18a0160a0a91784682c4da51e8503a7"
     }
   },
   {
@@ -3624,11 +3404,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 5.5
-    },
-    "poster": {
-      "path": "media/poster/seated-calf-raise.jpg",
-      "bytes": 75814,
-      "sha256": "ea8d70bf1e6b5bef6aabe18af09f95f6fcaa3f77ecdf271e4926946b5cebaed3"
     }
   },
   {
@@ -3699,11 +3474,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/45-degree-leg-press-calf-raise.jpg",
-      "bytes": 53401,
-      "sha256": "5c0ea3a713596bcf5744150ff785b9452f3669fad759e3d0e0d4c291a593175d"
     }
   },
   {
@@ -3774,11 +3544,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/hip-adduction-machine.jpg",
-      "bytes": 67820,
-      "sha256": "20ca4967afb9d993091780d3429a39a435a9d14092aab4eb40a5fceebd984397"
     }
   },
   {
@@ -3856,11 +3621,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/alternating-lateral-lunge-with-overhead-reach.jpg",
-      "bytes": 81781,
-      "sha256": "8c34c1c34dd71488a7ef3b9ab1cb3d11a3e26a7d8dc185c3ab58b953c3675263"
     }
   },
   {
@@ -3935,11 +3695,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/deep-squat-prying.jpg",
-      "bytes": 70595,
-      "sha256": "7ecd9e98d01e34d34aa470587f522f01a3b69a6322b5deed0fa0caf653131bcc"
     }
   },
   {
@@ -4014,11 +3769,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/cable-hip-abduction.jpg",
-      "bytes": 75621,
-      "sha256": "0a70f72c4c6b71c7518d2a927a83473004af80ae96de47c067bbdb29a33baeab"
     }
   },
   {
@@ -4091,11 +3841,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/cradle-walk.jpg",
-      "bytes": 82764,
-      "sha256": "68eaa9cfa5c13d6e1b0d006fca77e03fa1279e945b138c45a81f23179ec8ce81"
     }
   },
   {
@@ -4170,11 +3915,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 6.8
-    },
-    "poster": {
-      "path": "media/poster/fire-hydrant-circles.jpg",
-      "bytes": 72037,
-      "sha256": "e0849107f186e8590789e69ff061ae14d0d45c4d6fa01afe36f78c6b4c2307bc"
     }
   },
   {
@@ -4251,11 +3991,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 6.5
-    },
-    "poster": {
-      "path": "media/poster/kneeling-posterior-hip-capsule-mobilization.jpg",
-      "bytes": 79456,
-      "sha256": "c767820fe6fd737e3df92ffa2e51b49b00e4bc558882a910353e175cfe9e0c3f"
     }
   },
   {
@@ -4330,11 +4065,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/it-band-foam-rolling.jpg",
-      "bytes": 66081,
-      "sha256": "c99271a9929d536d95a5d849f55fa9d0c1bd5e9f632d429bb671ced9bd0ebc15"
     }
   },
   {
@@ -4407,11 +4137,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/plantar-fascia-lacrosse-ball.jpg",
-      "bytes": 73099,
-      "sha256": "eaa7b652ec48ae5831779c5df4c8c739170f9dbe11908f155e9972c28f4c57bd"
     }
   },
   {
@@ -4486,11 +4211,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/palmar-fascia-lacrosse-ball.jpg",
-      "bytes": 68484,
-      "sha256": "65f987c4e52835f78660ec891099f8515ca871163436eed4cbe93644a4c75c2e"
     }
   },
   {
@@ -4566,11 +4286,6 @@
       "width": 1280,
       "height": 720,
       "durationSec": 8
-    },
-    "poster": {
-      "path": "media/poster/neck-tiger-tail.jpg",
-      "bytes": 76821,
-      "sha256": "ba249874dd6f9c6c4c5eeda16b76e69fe32c20a97ae3ab2bd82c9d6654d46fa2"
     }
   }
 ]

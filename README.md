@@ -4,10 +4,9 @@ Free, ready-to-use exercise videos and structured data for fitness apps, website
 
 - **57 exercises**: strength, mobility and recovery, covering 22 muscle groups
 - **Video**: 1280×720 H.264 MP4, 4–8 s seamless loops, no audio, `faststart` (plays while downloading)
-- **Poster** JPG for every clip
 - **Data**: JSON + CSV with muscles, equipment, level, joint stress and 3 form cues per exercise
 - **Translations**: names and cues in English, German, Spanish, French, Italian, Japanese (muscle and equipment labels also in Vietnamese)
-- **Total size**: ~32 MB
+- **Total size**: ~28 MB
 
 These are the same clips used in the GymPlan workout planner, released for the community.
 
@@ -17,7 +16,7 @@ These are the same clips used in the GymPlan workout planner, released for the c
 
 | Part | Licence | What you must do |
 | --- | --- | --- |
-| Videos and posters (`media/`) | [CC BY 4.0](media/LICENSE) | Use freely, including commercially. Credit: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0` |
+| Videos (`media/`) | [CC BY 4.0](media/LICENSE) | Use freely, including commercially. Credit: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0` |
 | Data and code (`data/`, `scripts/`, `index.html`) | [MIT](LICENSE) | Keep the copyright notice |
 
 Put the credit anywhere reasonable: an About screen, credits page, video caption or footer.
@@ -32,7 +31,6 @@ data/
   equipment.json     equipment key -> { label: { en, vi } }
 media/
   video/<slug>.mp4
-  poster/<slug>.jpg
   SHA256SUMS         checksums for every media file
   LICENSE            CC BY 4.0
 scripts/
@@ -45,7 +43,7 @@ index.html           browsable gallery
 ```jsonc
 {
   "id": "c01",                       // stable id, never reused
-  "slug": "dumbbell-bench-press",    // file name of the video and poster
+  "slug": "dumbbell-bench-press",    // file name of the video
   "name": "Dumbbell Bench Press",
   "primaryMuscle": "chest",          // key in muscles.json
   "secondaryMuscles": ["triceps", "shoulders"],
@@ -57,8 +55,7 @@ index.html           browsable gallery
   "gear": ["equipment.dumbbell", "accessory.gloves"], // helpful products, "<group>.<item>"
   "cues": ["Press from mid-chest ...", "...", "..."],
   "translations": { "de": { "name": "...", "cues": ["..."] }, "es": {}, "fr": {}, "it": {}, "ja": {} },
-  "video":  { "path": "media/video/dumbbell-bench-press.mp4", "bytes": 512345, "sha256": "...", "width": 1280, "height": 720, "durationSec": 7.5 },
-  "poster": { "path": "media/poster/dumbbell-bench-press.jpg", "bytes": 70123, "sha256": "..." }
+  "video":  { "path": "media/video/dumbbell-bench-press.mp4", "bytes": 512345, "sha256": "...", "width": 1280, "height": 720, "durationSec": 7.5 }
 }
 ```
 
@@ -78,7 +75,6 @@ jsDelivr serves any file in this repo. Pin a release tag so files never change u
 ```
 https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/data/exercises.json
 https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/media/video/barbell-back-squat.mp4
-https://cdn.jsdelivr.net/gh/Kezlo98/gym-exercise-videos@v1.0.0/media/poster/barbell-back-squat.jpg
 ```
 
 For an app with real traffic, copy the files to your own storage (S3, R2, your server) instead.
@@ -86,8 +82,7 @@ For an app with real traffic, copy the files to your own storage (S3, R2, your s
 ### 3. Show a clip
 
 ```html
-<video src="media/video/barbell-back-squat.mp4" poster="media/poster/barbell-back-squat.jpg"
-       autoplay muted loop playsinline></video>
+<video src="media/video/barbell-back-squat.mp4" autoplay muted loop playsinline></video>
 ```
 
 `muted` + `playsinline` are needed for autoplay on iOS and most browsers.
@@ -195,9 +190,9 @@ Fixes to cues and new translations are welcome: edit `data/exercises.json`, run 
 
 ## Tiếng Việt
 
-Bộ **57 video bài tập gym cơ bản miễn phí** (720p, lặp liền, không tiếng) kèm poster và dữ liệu JSON/CSV: nhóm cơ, dụng cụ, cấp độ, khớp cần lưu ý và 3 gợi ý kỹ thuật cho mỗi bài (Anh, Đức, Tây Ban Nha, Pháp, Ý, Nhật; tên nhóm cơ/dụng cụ có tiếng Việt).
+Bộ **57 video bài tập gym cơ bản miễn phí** (720p, lặp liền, không tiếng) kèm dữ liệu JSON/CSV: nhóm cơ, dụng cụ, cấp độ, khớp cần lưu ý và 3 gợi ý kỹ thuật cho mỗi bài (Anh, Đức, Tây Ban Nha, Pháp, Ý, Nhật; tên nhóm cơ/dụng cụ có tiếng Việt).
 
-- Video và poster: **CC BY 4.0**, dùng tự do kể cả thương mại, chỉ cần ghi nguồn: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0`
+- Video: **CC BY 4.0**, dùng tự do kể cả thương mại, chỉ cần ghi nguồn: `Exercise videos by GymPlan (galaxy-fitness.com), CC BY 4.0`
 - Dữ liệu và code: **MIT**
 - Tải về bằng `git clone` hoặc file zip ở mục Releases, hoặc nhúng trực tiếp qua jsDelivr (xem mục *Use it* ở trên)
 - Kiểm tra đủ file: `node scripts/validate-library.mjs`

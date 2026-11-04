@@ -39,26 +39,22 @@ for (const e of exercises) {
     const t = e.translations?.[l];
     if (!t?.name || t.cues?.length !== e.cues.length) fail(`${at} incomplete ${l} translation`);
   }
-  for (const kind of ['video', 'poster']) {
-    const f = e[kind];
-    const abs = join(root, f.path);
-    if (f.path !== `media/${kind}/${e.slug}.${kind === 'video' ? 'mp4' : 'jpg'}`) fail(`${at} ${kind} path does not match slug`);
-    if (!existsSync(abs)) { fail(`${at} missing file ${f.path}`); continue; }
-    if (statSync(abs).size !== f.bytes) fail(`${at} ${f.path} size mismatch`);
-    const hash = createHash('sha256').update(readFileSync(abs)).digest('hex');
-    if (hash !== f.sha256 || hash !== sums.get(f.path)) fail(`${at} ${f.path} checksum mismatch`);
-  }
+  const f = e.video;
+  const abs = join(root, f.path);
+  if (f.path !== `media/video/${e.slug}.mp4`) fail(`${at} video path does not match slug`);
+  if (!existsSync(abs)) { fail(`${at} missing file ${f.path}`); continue; }
+  if (statSync(abs).size !== f.bytes) fail(`${at} ${f.path} size mismatch`);
+  const hash = createHash('sha256').update(readFileSync(abs)).digest('hex');
+  if (hash !== f.sha256 || hash !== sums.get(f.path)) fail(`${at} ${f.path} checksum mismatch`);
 }
 
 // No orphan media files without an exercise entry.
-for (const kind of ['video', 'poster']) {
-  for (const file of readdirSync(join(root, 'media', kind))) {
-    if (!exercises.some((e) => e[kind].path === `media/${kind}/${file}`)) fail(`orphan file media/${kind}/${file}`);
-  }
+for (const file of readdirSync(join(root, 'media', 'video'))) {
+  if (!exercises.some((e) => e.video.path === `media/video/${file}`)) fail(`orphan file media/video/${file}`);
 }
 
 if (errors.length) {
   console.error(`✗ ${errors.length} problem(s):\n  ${errors.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`✓ ${exercises.length} exercises, ${exercises.length * 2} media files, all checksums match`);
+console.log(`✓ ${exercises.length} exercises, ${exercises.length} videos, all checksums match`);
