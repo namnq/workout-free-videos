@@ -1,0 +1,156 @@
+{
+  "chest": {
+    "region": "upper",
+    "label": {
+      "en": "Chest",
+      "vi": "Ngực"
+    }
+  },
+  "shoulders": {
+    "region": "upper",
+    "label": {
+      "en": "Shoulders",
+      "vi": "Vai"
+    }
+  },
+  "triceps": {
+    "region": "upper",
+    "label": {
+      "en": "Triceps",
+      "vi": "Tay sau"
+    }
+  },
+  "biceps": {
+    "region": "upper",
+    "label": {
+      "en": "Biceps",
+      "vi": "Tay trước"
+    }
+  },
+  "forearm": {
+    "region": "upper",
+    "label": {
+      "en": "Forearms",
+      "vi": "Cẳng tay"
+    }
+  },
+  "traps": {
+    "region": "upper",
+    "label": {
+      "en": "Traps",
+      "vi": "Cơ thang"
+    }
+  },
+  "upperBack": {
+    "region": "upper",
+    "label": {
+      "en": "Upper back",
+      "vi": "Lưng trên"
+    }
+  },
+  "lats": {
+    "region": "upper",
+    "label": {
+      "en": "Lats",
+      "vi": "Xô"
+    }
+  },
+  "lowerBack": {
+    "region": "core",
+    "label": {
+      "en": "Lower back",
+      "vi": "Lưng dưới"
+    }
+  },
+  "abs": {
+    "region": "core",
+    "label": {
+      "en": "Abs",
+      "vi": "Bụng"
+    }
+  },
+  "obliques": {
+    "region": "core",
+    "label": {
+      "en": "Obliques",
+      "vi": "Liên sườn"
+    }
+  },
+  "glutes": {
+    "region": "lower",
+    "label": {
+      "en": "Glutes",
+      "vi": "Mông"
+    }
+  },
+  "quads": {
+    "region": "lower",
+    "label": {
+      "en": "Quads",
+      "vi": "Đùi trước"
+    }
+  },
+  "hamstrings": {
+    "region": "lower",
+    "label": {
+      "en": "Hamstrings",
+      "vi": "Đùi sau"
+    }
+  },
+  "adductors": {
+    "region": "lower",
+    "label": {
+      "en": "Adductors",
+      "vi": "Đùi trong"
+    }
+  },
+  "abductors": {
+    "region": "lower",
+    "label": {
+      "en": "Abductors",
+      "vi": "Hông ngoài"
+    }
+  },
+  "calves": {
+    "region": "lower",
+    "label": {
+      "en": "Calves",
+      "vi": "Bắp chân"
+    }
+  },
+  "hipFlexors": {
+    "region": "mobility",
+    "label": {
+      "en": "Hip flexors",
+      "vi": "Gập hông"
+    }
+  },
+  "itBand": {
+    "region": "mobility",
+    "label": {
+      "en": "IT band",
+      "vi": "Dải chậu chày"
+    }
+  },
+  "neck": {
+    "region": "mobility",
+    "label": {
+      "en": "Neck",
+      "vi": "Cổ"
+    }
+  },
+  "palmar": {
+    "region": "mobility",
+    "label": {
+      "en": "Hands",
+      "vi": "Bàn tay"
+    }
+  },
+  "plantar": {
+    "region": "mobility",
+    "label": {
+      "en": "Feet",
+      "vi": "Bàn chân"
+    }
+  }
+}

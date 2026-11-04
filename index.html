@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Exercise Videos</title>
+<meta name="description" content="Free exercise videos and data: 57 gym exercises with 720p clips, posters, form cues and translations.">
+<style>
+  :root { --bg: #f7f7f5; --card: #fff; --fg: #1b1b1b; --muted: #6b6b6b; --line: #e3e3df; --accent: #e4572e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121212; --card: #1d1d1d; --fg: #eee; --muted: #9a9a9a; --line: #2c2c2c; --accent: #ff7a50; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+  header, main { max-width: 1200px; margin: 0 auto; padding: 16px; }
+  h1 { margin: 8px 0 4px; font-size: 26px; }
+  header p { margin: 0 0 16px; color: var(--muted); }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  select, input { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--fg); font: inherit; }
+  input { flex: 1 1 200px; }
+  .count { color: var(--muted); margin: 12px 0 0; font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+  .body { padding: 12px 14px 14px; }
+  .body h2 { font-size: 16px; margin: 0 0 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+  .tag { font-size: 12px; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+  .tag.lvl { color: var(--accent); border-color: currentColor; }
+  ol { margin: 0; padding-inline-start: 18px; font-size: 13px; }
+  code { font-size: 12px; color: var(--muted); }
+  footer { max-width: 1200px; margin: 0 auto; padding: 24px 16px 40px; color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Gym Exercise Videos</h1>
+  <p>Free 720p exercise clips with form cues. Videos CC BY 4.0, data and code MIT.</p>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search exercises" aria-label="Search">
+    <select id="muscle" aria-label="Muscle"><option value="">All muscles</option></select>
+    <select id="equip" aria-label="Equipment"><option value="">All equipment</option></select>
+    <select id="level" aria-label="Level">
+      <option value="">All levels</option><option>beginner</option><option>intermediate</option><option>advanced</option>
+    </select>
+    <select id="lang" aria-label="Language">
+      <option value="en">English</option><option value="de">Deutsch</option><option value="es">Español</option>
+      <option value="fr">Français</option><option value="it">Italiano</option><option value="ja">日本語</option>
+    </select>
+  </div>
+  <p class="count" id="count"></p>
+</header>
+<main class="grid" id="grid"></main>
+<footer>
+  Data: <a href="data/exercises.json">exercises.json</a> · <a href="data/exercises.csv">exercises.csv</a> ·
+  Videos: <a href="media/LICENSE">CC BY 4.0</a>
+</footer>
+<script type="module">
+  const $ = (id) => document.getElementById(id);
+  const [exercises, muscles, equipment] = await Promise.all(
+    ['exercises', 'muscles', 'equipment'].map((f) => fetch(`data/${f}.json`).then((r) => r.json())));
+
+  const fill = (sel, map) => Object.entries(map).forEach(([k, v]) => sel.add(new Option(v.label.en, k)));
+  fill($('muscle'), muscles);
+  fill($('equip'), equipment);
+
+  // Play clips only while visible, to save bandwidth.
+  const io = new IntersectionObserver((entries) => entries.forEach(({ target, isIntersecting }) => {
+    if (isIntersecting) { if (!target.src) target.src = target.dataset.src; target.play().catch(() => {}); }
+    else target.pause();
+  }), { rootMargin: '200px' });
+
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function render() {
+    const q = $('q').value.trim().toLowerCase();
+    const lang = $('lang').value;
+    const list = exercises.filter((e) =>
+      (!$('muscle').value || e.primaryMuscle === $('muscle').value || e.secondaryMuscles.includes($('muscle').value)) &&
+      (!$('equip').value || e.equipment.includes($('equip').value)) &&
+      (!$('level').value || e.level === $('level').value) &&
+      (!q || e.name.toLowerCase().includes(q) || Object.values(e.translations).some((t) => t.name.toLowerCase().includes(q))));
+    io.disconnect();
+    $('count').textContent = `${list.length} of ${exercises.length} exercises`;
+    $('grid').innerHTML = list.map((e) => {
+      const t = lang === 'en' ? e : e.translations[lang];
+      return `<article class="card">
+        <video muted loop playsinline preload="none" poster="${e.poster.path}" data-src="${e.video.path}"></video>
+        <div class="body">
+          <h2>${esc(t.name)}</h2>
+          <div class="tags">
+            <span class="tag lvl">${e.level}</span>
+            <span class="tag">${esc(muscles[e.primaryMuscle].label.en)}</span>
+            ${e.equipment.map((q) => `<span class="tag">${esc(equipment[q].label.en)}</span>`).join('')}
+          </div>
+          <ol>${t.cues.map((c) => `<li>${esc(c)}</li>`).join('')}</ol>
+          <code>${e.slug}</code>
+        </div>
+      </article>`;
+    }).join('');
+    $('grid').querySelectorAll('video').forEach((v) => io.observe(v));
+  }
+
+  ['q', 'muscle', 'equip', 'level', 'lang'].forEach((id) => $(id).addEventListener('input', render));
+  render();
+</script>
+</body>
+</html>

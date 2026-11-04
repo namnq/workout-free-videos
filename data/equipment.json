@@ -1,0 +1,80 @@
+{
+  "barbell": {
+    "label": {
+      "en": "Barbell & rack",
+      "vi": "Tạ đòn & giá"
+    }
+  },
+  "dumbbell": {
+    "label": {
+      "en": "Dumbbells",
+      "vi": "Tạ đơn"
+    }
+  },
+  "bench": {
+    "label": {
+      "en": "Bench",
+      "vi": "Ghế tập"
+    }
+  },
+  "cable": {
+    "label": {
+      "en": "Cable station",
+      "vi": "Máy cáp"
+    }
+  },
+  "machine": {
+    "label": {
+      "en": "Machines",
+      "vi": "Máy tập"
+    }
+  },
+  "pullupBar": {
+    "label": {
+      "en": "Pull-up bar",
+      "vi": "Xà đơn"
+    }
+  },
+  "dipBars": {
+    "label": {
+      "en": "Dip bars",
+      "vi": "Xà kép"
+    }
+  },
+  "ezBar": {
+    "label": {
+      "en": "EZ curl bar",
+      "vi": "Đòn EZ"
+    }
+  },
+  "plate": {
+    "label": {
+      "en": "Weight plates",
+      "vi": "Bánh tạ"
+    }
+  },
+  "ball": {
+    "label": {
+      "en": "Stability ball",
+      "vi": "Bóng tập"
+    }
+  },
+  "roller": {
+    "label": {
+      "en": "Foam roller",
+      "vi": "Con lăn"
+    }
+  },
+  "lacrosse": {
+    "label": {
+      "en": "Massage ball",
+      "vi": "Bóng massage"
+    }
+  },
+  "bodyweight": {
+    "label": {
+      "en": "Bodyweight",
+      "vi": "Không dụng cụ"
+    }
+  }
+}
