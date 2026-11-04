@@ -16,6 +16,7 @@
 [Bắt đầu nhanh](#-bắt-đầu-nhanh) ·
 [Định dạng dữ liệu](#-định-dạng-dữ-liệu) ·
 [Danh sách bài tập](#-danh-sách-bài-tập) ·
+[Thêm video](#-sắp-có-thêm-video) ·
 [Đóng góp](#-đóng-góp)
 
 </div>
@@ -194,6 +195,12 @@ node scripts/validate-library.mjs      # Node 18+, không cần cài gì
 shasum -a 256 -c media/SHA256SUMS      # macOS
 sha256sum -c media/SHA256SUMS          # Linux
 ```
+
+## 🌱 Sắp có thêm video
+
+Đây mới chỉ là khởi đầu. Nếu thư viện được cộng đồng đón nhận, chúng mình sẽ tiếp tục quay và bổ sung thêm bài tập.
+
+Muốn có thêm video? ⭐ Star repo và [mở issue](https://github.com/namnq/workout-free-videos/issues/new) ghi tên bài tập bạn muốn có. Bài nào được yêu cầu nhiều nhất sẽ được quay trước.
 
 ## 🤝 Đóng góp
 

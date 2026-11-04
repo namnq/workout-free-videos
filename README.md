@@ -16,6 +16,7 @@
 [Quick start](#-quick-start) ·
 [Data format](#-data-format) ·
 [Exercise list](#-exercise-list) ·
+[More videos](#-more-videos-coming) ·
 [Contributing](#-contributing)
 
 </div>
@@ -194,6 +195,12 @@ node scripts/validate-library.mjs      # Node 18+, no install
 shasum -a 256 -c media/SHA256SUMS      # macOS
 sha256sum -c media/SHA256SUMS          # Linux
 ```
+
+## 🌱 More videos coming
+
+This is just the start. If the library proves useful to the community, we'll keep filming and add more exercises.
+
+Want that to happen? ⭐ Star the repo and [open an issue](https://github.com/namnq/workout-free-videos/issues/new) naming the exercises you'd like next. The most requested ones get filmed first.
 
 ## 🤝 Contributing
 
