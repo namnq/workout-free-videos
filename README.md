@@ -34,6 +34,9 @@
 
 These are the same clips used in the GymPlan workout planner, released for the community.
 
+> [!NOTE]
+> Every exercise was reviewed and edited by hand, one by one, so the video and form cues show the most correct technique possible.
+
 ## 🚀 Quick start
 
 **Hot-link from jsDelivr** (free CDN, no hosting needed). Pin a version tag so files never change under you:

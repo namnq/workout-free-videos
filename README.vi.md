@@ -34,6 +34,9 @@
 
 Đây chính là các clip dùng trong app lên lịch tập GymPlan, được chia sẻ cho cộng đồng.
 
+> [!NOTE]
+> Từng động tác đều được rà soát và chỉnh sửa thủ công, từng bài một, để video và gợi ý kỹ thuật đúng kỹ thuật nhất có thể.
+
 ## 🚀 Bắt đầu nhanh
 
 **Nhúng trực tiếp qua jsDelivr** (CDN miễn phí, không cần hosting). Hãy ghim theo tag phiên bản để file không bị đổi bất ngờ:
